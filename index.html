@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="game-info">
+            <div class="score">分数: <span id="score">0</span></div>
+            <div class="level">等级: <span id="level">1</span></div>
+            <div class="next-piece">
+                <p>下一个方块:</p>
+                <canvas id="nextPiece" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div class="controls">
+            <button onclick="startGame()">开始游戏</button>
+            <button onclick="pauseGame()" id="pauseBtn">暂停</button>
+            <p>操作说明：</p>
+            <ul>
+                <li>← → 左右移动</li>
+                <li>↑ 旋转</li>
+                <li>↓ 加速下落</li>
+                <li>空格键 直接下落</li>
+            </ul>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
